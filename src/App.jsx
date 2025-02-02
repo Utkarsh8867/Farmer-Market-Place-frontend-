@@ -153,7 +153,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import Unauthorized from './components/Unautorise.jsx';
 import ProtectedRoute from './components/ProtectedRoute'; // Import the ProtectedRoute component
 import OrderedList from './components/OrderedList.jsx';
-
+import Services from './pages/Service.jsx';
 const App = () => {
   return (
     <Provider store={store}>
@@ -188,6 +188,7 @@ const App = () => {
             <Route path="unauthorized" element={<Unauthorized />} />
             <Route path="contact" element={<Contact />} />
             <Route path="OrderedList" element={<OrderedList />} />
+             <Route path="services" element={<Services />} />
           </Route>
         </Routes>
       </BrowserRouter>
