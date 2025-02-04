@@ -232,7 +232,7 @@ function AdminDashboard() {
 
   const fetchOrders = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v2/order/admin-all-orders");
+      const res = await fetch("https://server-fmp.onrender.com/api/v2/order/admin-all-orders");
       const data = await res.json();
       setOrders(data.orders || []);
     } catch (error) {
@@ -242,7 +242,7 @@ function AdminDashboard() {
 
   const fetchSellers = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v2/shop/admin-all-sellers");
+      const res = await fetch("https://server-fmp.onrender.com/api/v2/shop/admin-all-sellers");
       const data = await res.json();
       setSellers(data.sellers || []);
     } catch (error) {
@@ -252,7 +252,7 @@ function AdminDashboard() {
 
   const fetchProducts = async () => {
     try {
-      const res = await fetch("http://localhost:8000/api/v2/product/get-all-products");
+      const res = await fetch("https://server-fmp.onrender.com/api/v2/product/get-all-products");
       const data = await res.json();
       setProducts(data.products || []);
     } catch (error) {
@@ -267,7 +267,7 @@ function AdminDashboard() {
         return;
       }
 
-      const response = await fetch(`http://localhost:8000/api/v2/product/get-all-products-shop/${sellerId}`);
+      const response = await fetch(`https://server-fmp.onrender.com/api/v2/product/get-all-products-shop/${sellerId}`);
 
       if (!response.ok) {
         throw new Error("Failed to fetch seller products");
