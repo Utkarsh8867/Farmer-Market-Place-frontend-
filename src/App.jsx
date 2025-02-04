@@ -153,7 +153,7 @@ import AdminDashboard from './pages/AdminDashboard';
 import Unauthorized from './components/Unautorise.jsx';
 import ProtectedRoute from './components/ProtectedRoute'; // Import the ProtectedRoute component
 import OrderedList from './components/OrderedList.jsx';
-import Services from './pages/Service.jsx';
+import Services from './pages/Services.jsx';
 const App = () => {
   return (
     <Provider store={store}>
