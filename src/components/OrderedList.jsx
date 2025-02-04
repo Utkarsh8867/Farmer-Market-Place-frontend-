@@ -214,7 +214,7 @@ const OrderPage = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/v2/order/get-all-orders/${userId}`);
+        const response = await fetch(`https://server-fmp.onrender.com/api/v2/order/get-all-orders/${userId}`);
         const data = await response.json();
 
         if (response.ok) {
