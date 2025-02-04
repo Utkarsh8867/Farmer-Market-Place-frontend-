@@ -56,7 +56,7 @@ const FruitsPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/v2/cart/add-to-cart", {
+      const response = await fetch("https://server-fmp.onrender.com/api/v2/cart/add-to-cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ const FruitsPage = () => {
                   className="bg-gray-800 p-4 rounded-lg shadow-lg relative hover:shadow-xl transition-all duration-300"
                 >
                   <img
-                    src={fruit.image.startsWith("http") ? fruit.image : `http://localhost:8000${fruit.image}`}
+                    src={fruit.image.startsWith("http") ? fruit.image : `https://server-fmp.onrender.com${fruit.image}`}
                     alt={fruit.name}
                     className="w-full h-40 object-cover rounded-md mb-4"
                   />
