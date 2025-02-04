@@ -215,7 +215,7 @@ const Registration = ({ onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8000/api/v2/user/create-user', { // Updated endpoint
+      const response = await fetch('https://server-fmp.onrender.com/api/v2/user/create-user', { // Updated endpoint
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
