@@ -50,7 +50,7 @@ const GrainsPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/v2/cart/add-to-cart", {
+      const response = await fetch("https://server-fmp.onrender.com/api/v2/cart/add-to-cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -122,7 +122,7 @@ const GrainsPage = () => {
                   className="bg-gray-800 p-4 rounded-lg shadow-md relative"
                 >
                   <img
-                    src={grain.image.startsWith("http") ? grain.image : `http://localhost:8000${grain.image}`}
+                    src={grain.image.startsWith("http") ? grain.image : `https://server-fmp.onrender.com${grain.image}`}
                     alt={grain.name}
                     className="w-full h-40 object-cover rounded-md"
                   />
