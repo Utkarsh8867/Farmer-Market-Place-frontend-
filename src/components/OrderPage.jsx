@@ -616,7 +616,7 @@ const OrderPage = () => {
       const userId = localStorage.getItem("userId");
       if (!userId) return alert("Please log in.");
 
-      const response = await fetch(`http://localhost:8000/api/v2/cart/cart/${userId}`);
+      const response = await fetch(`https://server-fmp.onrender.com/api/v2/cart/cart/${userId}`);
       const data = await response.json();
 
       if (data.success) {
@@ -628,7 +628,7 @@ const OrderPage = () => {
       const userId = localStorage.getItem("userId");
       if (!userId) return alert("Please log in.");
 
-      const response = await fetch(`http://localhost:8000/api/v2/user/${userId}/addresses`);
+      const response = await fetch(`https://server-fmp.onrender.com/api/v2/user/${userId}/addresses`);
       const data = await response.json();
 
       if (data.success) {
@@ -653,7 +653,7 @@ const OrderPage = () => {
     if (!userId) return alert("User not logged in");
 
     try {
-      const response = await fetch(`http://localhost:8000/api/v2/user/user/${userId}/add-address`, {
+      const response = await fetch(`https://server-fmp.onrender.com/api/v2/user/user/${userId}/add-address`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
