@@ -55,7 +55,7 @@ const Landingpage = () => {
     const fetchFeaturedProducts = async () => {
       try {
         setLoading(true);
-        const response = await axios.get("http://localhost:8000/api/v2/product/get-products-by-category", {
+        const response = await axios.get("https://server-fmp.onrender.com/api/v2/product/get-products-by-category", {
           params: { isFeatured: true }, // Only fetch featured products
         });
         setFeaturedProducts(response.data.products);
@@ -77,7 +77,7 @@ const Landingpage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/v2/cart/add-to-cart", {
+      const response = await fetch("https://server-fmp.onrender.com/api/v2/cart/add-to-cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
