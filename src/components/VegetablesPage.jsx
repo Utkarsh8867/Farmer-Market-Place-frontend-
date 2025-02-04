@@ -22,7 +22,7 @@ const VegetablesPage = () => {
     const fetchVegetables = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/v2/product/get-Vegetables"
+          "https://server-fmp.onrender.com/api/v2/product/get-Vegetables"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch vegetables");
@@ -54,7 +54,7 @@ const VegetablesPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/v2/cart/add-to-cart", {
+      const response = await fetch("https://server-fmp.onrender.com/api/v2/cart/add-to-cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
