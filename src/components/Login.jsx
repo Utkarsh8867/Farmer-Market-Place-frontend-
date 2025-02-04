@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/api/v2/user/login-user', formData);
+      const response = await axios.post('https://server-fmp.onrender.com/api/v2/user/login-user', formData);
 
       if (response.status === 200) {
         const { token, userId, role } = response.data;
