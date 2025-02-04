@@ -332,7 +332,7 @@ export default function SellerDashboard() {
       const shopIdFromLocalStorage = shopId; // Assuming this is fetched from localStorage
 
       // Fetch all orders for the seller from the API
-      const res = await fetch(`http://localhost:8000/api/v2/order/get-seller-all-orders/${shopIdFromLocalStorage}`);
+      const res = await fetch(`https://server-fmp.onrender.com/api/v2/order/get-seller-all-orders/${shopIdFromLocalStorage}`);
       if (!res.ok) throw new Error("Failed to fetch orders");
 
       const data = await res.json();
@@ -351,7 +351,7 @@ export default function SellerDashboard() {
   // Fetch all products for the seller
   const fetchProducts = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v2/product/get-all-products-shop/${shopId}`);
+      const res = await fetch(`https://server-fmp.onrender.com/api/v2/product/get-all-products-shop/${shopId}`);
       if (!res.ok) throw new Error("Failed to fetch products");
       const data = await res.json();
       setProducts(data.products || []);
@@ -364,7 +364,7 @@ export default function SellerDashboard() {
   // Fetch featured products
   const fetchFeaturedProducts = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/v2/product/get-all-Featured-products/${shopId}`);
+      const res = await fetch(`https://server-fmp.onrender.com/api/v2/product/get-all-Featured-products/${shopId}`);
       if (!res.ok) throw new Error("Failed to fetch featured products");
       const data = await res.json();
       if (data.success && data.products) {
@@ -388,7 +388,7 @@ export default function SellerDashboard() {
     }
 
     try {
-      const res = await fetch(`http://localhost:8000/api/v2/product/create-product`, {
+      const res = await fetch(`https://server-fmp.onrender.com/api/v2/product/create-product`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -430,7 +430,7 @@ export default function SellerDashboard() {
     if (!confirmDelete) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/api/v2/product/delete-product/${productId}`, {
+      const res = await fetch(`https://server-fmp.onrender.com/api/v2/product/delete-product/${productId}`, {
         method: "DELETE",
       });
       if (!res.ok) throw new Error("Failed to delete product");
