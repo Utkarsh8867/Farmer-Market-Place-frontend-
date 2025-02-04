@@ -19,7 +19,7 @@ const CartPage = () => {
             }
 
             try {
-                const response = await fetch(`http://localhost:8000/api/v2/cart/cart/${userId}`);
+                const response = await fetch(`https://server-fmp.onrender.com/api/v2/cart/cart/${userId}`);
                 if (!response.ok) {
                     throw new Error(`Failed to fetch cart: ${response.statusText}`);
                 }
@@ -58,7 +58,7 @@ const CartPage = () => {
         }, 0);
 
         try {
-            const response = await fetch("http://localhost:8000/api/v2/cart/update-quantity", {
+            const response = await fetch("https://server-fmp.onrender.com/api/v2/cart/update-quantity", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const CartPage = () => {
         if (!userId) return toast.error("User not logged in");
 
         try {
-            const response = await fetch("http://localhost:8000/api/v2/cart/remove-from-cart", {
+            const response = await fetch("https://server-fmp.onrender.com/api/v2/cart/remove-from-cart", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
