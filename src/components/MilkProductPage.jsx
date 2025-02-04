@@ -21,7 +21,7 @@ const MilkProductsPage = () => {
     const fetchMilkProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8000/api/v2/product/milk-products"
+          "https://server-fmp.onrender.com/api/v2/product/milk-products"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch milk products");
@@ -51,7 +51,7 @@ const MilkProductsPage = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/api/v2/cart/add-to-cart", {
+      const response = await fetch("https://server-fmp.onrender.com/api/v2/cart/add-to-cart", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -120,7 +120,7 @@ const MilkProductsPage = () => {
                   className="bg-gray-800 p-4 rounded-lg shadow-md relative"
                 >
                   <img
-                    src={product.image.startsWith("http") ? product.image : `http://localhost:8000${product.image}`}
+                    src={product.image.startsWith("http") ? product.image : `https://server-fmp.onrender.com${product.image}`}
                     alt={product.name}
                     className="w-full h-40 object-cover rounded-md"
                   />
